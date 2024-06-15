@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Letter</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f3f3f3;
+      animation: colorChange 9s infinite, backgroundChange 12s infinite;
+      background-size: cover;
+    }
+
+    @keyframes colorChange {
+      0% { background-color: #f3f3f3; }
+      33% { background-color: #f7cac9; }
+      66% { background-color: #92a8d1; }
+      100% { background-color: #f3f3f3; }
+    }
+
+    @keyframes backgroundChange {
+      0% { background-image: url('your-first-image.jpg'); }
+      25% { background-image: url('your-second-image.jpg'); }
+      50% { background-image: url('your-third-image.jpg'); }
+      75% { background-image: url('your-fourth-image.jpg'); }
+      100% { background-image: url('your-first-image.jpg'); }
+    }
+
+    @keyframes textColorChange {
+      0%, 100% { color: #000; }
+      50% { color: #ff0000; } /* Change to desired color */
+    }
+
+    .emoji {
+      font-size: 5rem;
+      cursor: pointer;
+    }
+
+    .letter {
+      display: none;
+      position: absolute;
+      width: 300px;
+      padding: 20px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+      border-radius: 5px;
+      background-color: white;
+      text-align: center;
+      
+      /* New styles */
+      font-size: 1.5rem; /* Adjust the size as needed */
+      color: #000; /* Default text color */
+      animation: textColorChange 2s infinite;
+    }
+
+    .letter.open {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="emoji" onclick="openLetter()">✉️ My Love Alice 💕</div>
+
+  <div class="letter" id="letter">
+    في هذا اليوم الجميل، أود أن أعبر لكِ عن مدى سعادتي بوجودكِ في حياتي. كل لحظة نقضيها معًا تجعلني أدرك كم أنا محظوظ لأنني وجدتك. أنتِ النور الذي يضيء أيامي، والبهجة التي تملأ قلبي. أحبك أكثر مما تستطيع الكلمات أن تعبر عنه، وأتمنى لكِ عيدًا مليئًا بالحب والسعادة والفرح. 💕
+    <br><br>
+    You are the sunshine that brightens up my day, and the stars that light up my night. You are the rhythm that makes my heart sing, and the melody that fills my soul with joy. I love you more than words can express, and I wish you a day filled with love, happiness, and joy. 💕
+  </div>
+
+  <script>
+    function openLetter() {
+      document.getElementById('letter').classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>
